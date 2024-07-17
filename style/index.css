@@ -1,5 +1,15 @@
+html,body {
+    overflow-x: hidden;
+}
+body {
+    font-family: "Krona One", sans-serif;
+}
 .three {
     position: relative;
+}
+.three > a {
+    position: absolute;
+    left: 160px; top: 41%;
 }
 .three .bee_link {
     position: absolute;
@@ -11,6 +21,10 @@
 .three .bee_link a img {}
 .four {
     position: relative;
+}
+.four > a {
+    position: absolute;
+    left: 160px; top: 41%;
 }
 .four .market_link {
     position: absolute;
