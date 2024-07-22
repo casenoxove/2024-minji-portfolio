@@ -1,49 +1,602 @@
-html,body {
-    overflow-x: hidden;
+html, body {
+    scroll-behavior: smooth;
 }
-body {
+main {
+    font-family: "Noto Sans KR", sans-serif;
+    letter-spacing: -0.2px;
+}
+main nav {
+    padding-right: 158px;
+    z-index: 9999;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(255,255,255,0.4);
+    backdrop-filter: blur(4px);
+    position: fixed;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.5s;
+}
+nav.visible {
+    visibility: visible;
+    opacity: 1;
+}
+main nav a {
+    font-family: "Krona One", sans-serif;
+    margin-left: 70px;
+    position: relative;
+}
+main nav a::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-color: rgba(0,122,234,0.3);
+    z-index: -999;
+    transform: scaleX(0);
+    transition: all 0.3s;
+}
+main nav a:hover::after {
+    transform: scaleX(1);
+}
+main .main_start {
+    position: relative;
+    background-color: #007AEA;
+    height: 950px;
+}
+main .main_start .main_icon_pade_one {}
+main .main_start .main_icon_pade_one p {}
+main .main_start .main_icon_pade_one p img {}
+main .main_start .main_icon_pade_one .pade_one {
+    animation: left_reveal 1s;
+}
+main .main_start .main_icon_pade_one .pade_two {
+    position: absolute;
+    right: 0; bottom: 0;
+    animation: right_reveal 1s;
+}
+
+/* 페이드 원 애니메이션 */
+
+@keyframes left_reveal {
+    0% {
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes right_reveal {
+    0% {
+        transform: translateY(300px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+main .main_start .main_icon_pade_two { /* 삥글삥글 도는 거 나타남 */
+    opacity: 0;
+    animation: fadeIn 0.7s 2.5s forwards;
+}
+main .main_start .main_icon_pade_two p {}
+main .main_start .main_icon_pade_two p img {}
+main .main_start .main_icon_pade_two .pade_three { /* 삥글삥글 도는 거 회전 */
+    position: absolute;
+    right: 10%; bottom: 19%;
+    animation: rotate 10s infinite linear 2.5s forwards;
+}
+main .main_start .main_icon_pade_two .pade_four { /* 삥글삥글 도는 거 회전 */
+    position: absolute;
+    left: 25%; top: 26%;
+    animation: rotate 10s infinite linear 2.5s forwards;
+}
+
+/* 페이드 투 애니메이션 */
+
+@keyframes rotate {
+    0% {
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+main .main_start .pade_two_text {
+    color: #FFFFFf;
+}
+main .main_start .pade_two_text .left { /* 왼쪽 텍스트 */
+    position: absolute;
+    left: 0; top: 0;
+    padding-left: 158px;
+    padding-top: 80px;
+    font-size: 1.25rem;
+    line-height: 170%;
+    opacity: 0;
+    animation: fadeUp 1s 0.8s forwards;
+}
+main .main_start .pade_two_text .left em {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+main .main_start .pade_two_text .right { /* 오른쪽 텍스트 */
+    position: absolute;
+    right: 0; top: 0;
+    padding-right: 158px;
+    padding-top: 80px;
+    font-size: 1.25rem;
+    line-height: 170%;
+    opacity: 0;
+    animation: fadeUp 1s 0.8s forwards;
+}
+main .main_start .pade_two_text .right em {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* 상단 텍스트 애니메이션 */
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main .main_start .main_icon_pade_three {}
+main .main_start .main_icon_pade_three p {}
+main .main_start .main_icon_pade_three p img {}
+main .main_start .main_icon_pade_three .pade_five {
+    position: absolute;
+    left: 19%; top: 29%;
+    opacity: 0;
+    animation: fadeUp 1s 1.9s forwards;
+}
+main .main_start .main_icon_pade_three .pade_six {
+    position: absolute;
+    right: 25%; bottom: 34%;
+    opacity: 0;
+    animation: fadeIn 1s 2.2s forwards;
+}
+main .main_start .main_icon_pade_three .pade_three_text {
+    position: absolute;
+    left: 25%; top: 38%;
     font-family: "Krona One", sans-serif;
 }
-.three {
-    position: relative;
+main .main_start .main_icon_pade_three .pade_three_text p {}
+main .main_start .main_icon_pade_three .pade_three_text p img {}
+main .main_start .main_icon_pade_three .pade_three_text h1 {
+    font-size: 8rem;
+    color: #FFFFFf;
+    opacity: 0;
+    animation: fadeUp 1s 1.8s forwards;
 }
-.three > a {
-    position: absolute;
-    left: 160px; top: 41%;
+main .main_start .main_icon_pade_three .pade_three_text .work {
+    font-size: 9.375rem;
+    color: #007AEA;
+    -webkit-text-stroke: 1px #FFFFFf;
 }
-.three .bee_link {
-    position: absolute;
-    right: 125px; bottom: 14%;
+
+/* 공통 애니메이션 */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-.three .bee_link a {
-    margin-left: 25px;
+
+/*  -------------------------- */
+/*  -----------프로필---------- */
+/*  -------------------------- */
+
+main .profile {
+    padding-top: 154px;
+    padding-left: 158px;
 }
-.three .bee_link a img {}
-.four {
-    position: relative;
-}
-.four > a {
-    position: absolute;
-    left: 160px; top: 41%;
-}
-.four .market_link {
-    position: absolute;
-    right: 125px; bottom: 14%;
-}
-.four .market_link a {
-    margin-left: 25px;
-}
-.four .market_link a img {}
-.five {
-    position: relative;
-}
-.five .app_link {
-    position: absolute;
-    right: 125px; bottom: 19%;
+main .profile h3 {
+    font-family: "Krona One", sans-serif;
+    font-size: 1.25rem;
     display: flex;
-    flex-flow: column;
+    align-items: center;
+    margin-bottom: 40px;
 }
-.five .app_link a {
+main .profile dl {
+    display: flex;
+}
+main .profile dt {
+    font-family: "Krona One", sans-serif;
+    padding-left: 32px;
+    font-size: 1.25rem;
+    line-height: 2;
+}
+main .profile dd {
+    font-size: 1.25rem;
+    padding-left: 40px;
+    line-height: 2;
+}
+main .profile .profile_up {
+    display: flex;
+    position: relative;
+}
+main .profile .profile_up::after {
+    content: '';
+    position: absolute;
+    left: 21%; top: 110%;
+    background-color: #808080;
+    width: 1130px; height: 1px;
+}
+main .profile .user_profile,
+main .profile .user_edcation {
+    padding-top: 40px;
+}
+main .profile .user_profile {
+    margin-left: 80px;
+}
+main .profile .user_edcation {
+    margin-left: 100px;
+}
+main .profile .user_profile .user_text dl:nth-child(2) dd {
+    margin-left: 22px;
+}
+main .profile .user_profile .user_text dl:nth-child(3) dd {
+    margin-left: 15px;
+}
+main .profile .user_edcation .user_text dl:nth-child(2) dd {
+    margin-left: 1px;
+}
+main .profile .user_edcation .user_text dl:nth-child(3) dd {
+    margin-left: 7px;
+}
+
+/* 프로필 아래 */
+
+main .profile .profile_down {
+    display: flex;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+main .profile .profile_down .user_contact {
+    padding-left: 35px;
+    margin-right: 100px;
+}
+main .profile .profile_down .tool {
+    margin-left: 100px;
+}
+main .profile .profile_down .tool .icon_up {
+    display: flex;
+}
+main .profile .profile_down .tool p {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+main .profile .profile_down .tool .icon_down {
+    display: flex;
+}
+main .profile .user_contact .user_text dl:nth-child(2) dd {
+    margin-left: 16px;
+}
+main .profile .user_experience .user_text dl:nth-child(2) dd {
+    margin-left: 6px;
+}
+main .web_design {}
+main .web_design .beeman {
+    position: relative;
+    background-color: #FFD179;
+    display: flex;
+}
+main .web_design .beeman .left {}
+main .web_design .marketb .left .title,
+main .web_design .beeman .left .title {
+    position: absolute;
+    left: 0; top: 0;
+    padding-left: 158px;
+    padding-top: 77px;
+}
+main .web_design .marketb .left .title h2,
+main .web_design .beeman .left .title h2 {
+    font-family: "Krona One", sans-serif;
+    font-size: 2.5rem;
+}
+main .web_design .marketb .left .title h2 em,
+main .web_design .beeman .left .title h2 em {
+    font-size: 4rem;
+}
+main .web_design .marketb .left .title p:nth-child(2),
+main .web_design .beeman .left .title p:nth-child(2) {
+    margin-top: 25px;
+    font-size: 2.25rem;
+    font-weight: 500;
+}
+main .web_design .marketb .left .title p:nth-child(3),
+main .web_design .beeman .left .title p:nth-child(3) {
+    margin: 25px 0;
+    line-height: 1.7;
+}
+main .web_design .marketb .left .title a,
+main .web_design .beeman .left .title a {
+    font-family: "Krona One", sans-serif;
+}
+main .web_design .beeman .right {}
+main .web_design .marketb .right > p,
+main .web_design .beeman .right > p {
+    padding-left: 100px;
+    padding-top: 20px;
+}
+main .web_design .beeman .right p img {}
+main .web_design .beeman .right .beeman_text {}
+main .web_design .right .time,
+main .web_design .right .contribute,
+main .web_design .right .use_tool,
+main .web_design .right .design {
+    display: flex;
     margin-top: 20px;
 }
-.five .app_link a img {}
+main .web_design .right h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding-left: 215px;
+}
+
+main .web_design .right .time p,
+main .web_design .right .contribute p,
+main .web_design .right .use_tool p,
+main .web_design .right .design p {
+    font-size: 1.25rem;
+    padding-left: 40px;
+}
+main .web_design .right .web_button {
+    margin-top: 70px;
+    padding-left: 200px;
+}
+main .web_design .right .web_button a {
+    position: relative;
+    display: inline-block;
+    font-size: 1.25rem;
+    padding: 10px 20px;
+    border: 1px solid #000000;
+    margin-right: 10px;
+    color: #000;
+    overflow: hidden;
+    z-index: 1;
+}
+main .web_design .right .web_button a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF; /* 원하는 배경색 */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+    z-index: -1;
+}
+main .web_design .right .web_button a:hover::before {
+    transform: scaleX(1);
+}
+main .web_design .right .web_button a:hover {
+    color: #000; /* 호버 시 텍스트 색상 변경 */
+}
+main .web_design .right .web_button a:hover {
+    background-color: rgba(0,0,0,0);
+}
+main .web_design .marketb {
+    position: relative;
+    background-color: #DBE2EF;
+    display: flex;
+}
+
+main .web_design .right .contribute p {
+    padding-left: 58px;
+}
+main .web_design .right .use_tool p {
+    padding-left: 59px;
+}
+main .web_design .right .design p {
+    padding-left: 59px;
+}
+
+main .app_design {
+    background-color: #007AEA;
+    color: #FFFFFF;
+    position: relative;
+}
+main .app_design .icon {
+    position: absolute;
+    left: 25%; top: 20%;
+    z-index: 100;
+}
+main .app_design .icon p:nth-child(1) {}
+main .app_design .icon p:nth-child(2) {
+    position: absolute;
+    right: 25%; top: 30px;
+    z-index: -50;
+}
+main .app_design .icon p:nth-child(3) {
+    position: absolute;
+    right: -245px; top: -50px;
+}
+main .app_design .app_content {
+    padding-left: 158px;
+}
+main .app_design .title {
+    padding-top: 112px;
+}
+main .app_design .title h2 {
+    font-family: "Krona One", sans-serif;
+    font-size: 2.5rem;
+}
+main .app_design .title p:nth-child(2) {
+    font-family: "Krona One", sans-serif;
+    font-size: 4rem;
+    margin: 38px 0;
+}
+main .app_design .title p:nth-child(3) {
+    line-height: 1.5;
+}
+main .app_design .app_link {
+    margin: 50px 0;
+}
+main .app_design .app_link a {
+    color: #FFFFFf;
+    margin-right: 50px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    position: relative;
+}
+
+main .app_design .app_link a::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -5px;
+    background-color: #FFFFFF;
+    width: 100%; height: 1px;
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+main .app_design .app_link a:hover::after{
+    transform: scaleX(1);
+}
+
+main .app_design .info {
+    padding-bottom: 118px;
+}
+main .app_design .info .time {}
+main .app_design .info .time,
+main .app_design .info .contribute,
+main .app_design .info .tool,
+main .app_design .info .page,
+main .app_design .info .contribute_page {
+    display: flex;
+    margin-bottom: 10px;
+}
+main .app_design .info h4 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.7;
+    padding-right: 50px;
+}
+main .app_design .info p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+main .app_design > p {
+    position: absolute;
+    right: 158px; bottom: 100px;
+}
+main .sns_design {
+    padding-left: 158px;
+}
+main .sns_design h2 {
+    font-family: "Krona One", sans-serif;
+    font-size: 2.5rem;
+    color: #007AEA;
+    padding: 112px 0;
+}
+main .sns_design .banner_img .up_img {
+    margin-bottom: 30px;
+}
+main .sns_design .banner_img .up_img,
+main .sns_design .banner_img .down_img {
+    display: flex;
+}
+main .sns_design .banner_img .up_img p,
+main .sns_design .banner_img .down_img p {
+    margin-right: 30px;
+}
+main .detail_page {
+    padding-left: 158px;
+}
+main .detail_page h2 {
+    font-family: "Krona One", sans-serif;
+    font-size: 2.5rem;
+    color: #007AEA;
+    padding: 112px 0;
+}
+main .detail_page .detail_list {
+    display: flex;
+}
+main .detail_page .detail_list a {}
+main .detail_page .detail_list a img {
+    margin-right: 40px;
+    width: 368px;
+    height: 500px;
+    object-fit: cover;
+    object-position: top;
+}
+main .detail_page .big_bg {
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 999;
+    width: 100%; height: 100vh;
+    background: rgba(0,0,0,0.6);
+}
+main .detail_page .big_bg .img {
+    max-width: 50vw;
+    margin: 30px auto;
+    height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+main .detail_page .big_bg .img  img {
+    width: 100%;
+}
+main .last {
+    margin-top: 112px;
+    background-color: #007AEA;
+    color: #FFFFFF;
+}
+main .last .contact {
+    padding-left: 158px;
+    padding-top: 65px;
+}
+main .last .contact h4 {
+    font-weight: 700;
+}
+main .last .contact p:nth-child(2) {
+    padding: 10px 0;
+}
+main .last .contact p:nth-child(3) {
+    margin-bottom: 85px;
+}
+main .last .last_title {
+    padding-top: 30px;
+}
+main .last .last_title p {
+    padding-left: 442px;
+    padding-bottom: 10px;
+    font-size: 2rem;
+}
+main .last .last_title p em {
+    font-size: 2rem;
+    font-weight: 700;
+}
+main .last .last_title h1 {
+    font-family: "Krona One", sans-serif;
+    font-size: 8rem;
+    text-align: center;
+}
+main .last .kakao {
+    padding-top: 50px;
+    padding-bottom: 65px;
+    padding-right: 158px;
+    text-align: right;
+}
+main .last .kakao p img {}

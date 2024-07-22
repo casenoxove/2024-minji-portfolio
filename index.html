@@ -4,51 +4,308 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2024 강민지 포트폴리오</title>
+    <!-- 파비콘 -->
     <link rel="icon" href="./images/favicon.ico">
+    <!-- style -->
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/index.css">
+    <!-- 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- JAVA -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./script/script.js" defer></script>
 </head>
 <body>
-    <div class="one">
-        <p><img src="./images/1.png" alt=""></p>
-    </div>
-    <div class="two">
-        <p><img src="./images/2.png" alt=""></p>
-    </div>
-    <div class="three">
-        <p><img src="./images/3.png" alt=""></p>
-        <a href="https://beeman.co.kr/" target="_blank">page</a>
-        <div class="bee_link">
-            <a href="#"><img src="./images/beeman.png" alt=""></a>
-            <a href="#"><img src="./images/beeman2.png" alt=""></a>
-            <a href="#"><img src="./images/beeman3.png" alt=""></a>
+    <main>
+        <nav id="navbar">
+            <a href="#intro">Intro</a>
+            <a href="#profile">Profile</a>
+            <a href="#web">WEB</a>
+            <a href="#app">APP</a>
+            <a href="#sns">SNS</a>
+            <a href="#detail">Detail</a>
+        </nav>
+        <div class="main_start" id="intro">
+            <div class="main_icon_pade_one">
+                <p class="pade_one"><img src="./images/bg_icon1.png" alt=""></p>
+                <p class="pade_two"><img src="./images/bg_icon2.png" alt=""></p>
+            </div>
+            <div class="main_icon_pade_two">
+                <p class="pade_three"><img src="./images/bg_icon3.png" alt=""></p>
+                <p class="pade_four"><img src="./images/bg_icon4.png" alt=""></p>
+            </div>
+            <div class="pade_two_text">
+                <p class="left">디자이너로 <em>마침표를 찍고 싶은</em><br>강민지입니다.</p>
+                <p class="right"><em>2024</em> Web Designer</p>
+            </div>
+            <div class="main_icon_pade_three">
+                <p class="pade_five"><img src="./images/bg_icon5.png" alt=""></p>
+                <div class="pade_three_text">
+                    <h1 class="portfolio">PORTFOLIO</h1>
+                    <h1 class="work">WORK</h1>
+                </div>
+                <p class="pade_six"><img src="./images/bg_icon6.png" alt=""></p>
+            </div>
         </div>
-    </div>
-    <div class="four">
-        <p><img src="./images/4.png" alt=""></p>
-        <a href="https://marketb.kr/" target="_blank">page</a>
-        <div class="market_link">
-            <a href="https://www.figma.com/proto/t53EYI0cwecLohdaLRQLjY/%EB%A7%88%EC%BC%93%EB%B9%84-%EA%B8%B0%ED%9A%8D%EC%84%9C?node-id=33-2&t=lH9Yh8GryFx7oIT7-0&scaling=contain&content-scaling=fixed&page-id=0%3A1" target="_blank"><img src="./images/market.png" alt=""></a>
-            <a href="https://www.figma.com/proto/KZYpYrmTSDG1KKMjgM5Ytt/%EB%A7%88%EC%BC%93%EB%B9%84-%EC%99%80%EC%9D%B4%EC%96%B4%ED%94%84%EB%A0%88%EC%9E%84?node-id=4-2&t=JdDwn5bEFlxRWUWn-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" target="_blank"><img src="./images/market2.png" alt=""></a>
-            <a href="https://market-b.netlify.app/" target="_blank"><img src="./images/market3.png" alt=""></a>
+        <div class="profile" id="profile">
+            <div class="profile_up">
+                <p><img src="./images/picture.png" alt=""></p>
+                <div class="user_profile">
+                    <h3><img src="./images/side_bar.png" alt="">　PROFILE</h3>
+                    <div class="user_text">
+                        <dl>
+                            <dt>NAME</dt>
+                            <dd>강민지</dd>
+                        </dl>
+                        <dl>
+                            <dt>AGE</dt>
+                            <dd>2000.02.25</dd>
+                        </dl>
+                        <dl>
+                            <dt>MBTI</dt>
+                            <dd>ISTJ #신중함 #체계적인 #현실주의자</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="user_edcation">
+                    <h3><img src="./images/side_bar.png" alt="">　EDUCATION</h3>
+                    <div class="user_text">
+                        <dl>
+                            <dt>2024.08</dt>
+                            <dd>UI/UX 반응형 웹디자인 & 웹퍼블리셔 양성과정 수료</dd>
+                        </dl>
+                        <dl>
+                            <dt>2020.02</dt>
+                            <dd>신안산대학교 국제경영과 졸업</dd>
+                        </dl>
+                        <dl>
+                            <dt>2018.02</dt>
+                            <dd>인천효성고등학교 졸업</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="profile_down">
+                <div class="user_contact">
+                    <h3><img src="./images/side_bar.png" alt="">　CONTACT</h3>
+                    <div class="user_text">
+                        <dl>
+                            <dt>PHONE</dt>
+                            <dd>010 - 9969 - 4662</dd>
+                        </dl>
+                        <dl>
+                            <dt>EMAIL</dt>
+                            <dd>casenoxove@gmail.com</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="user_experience">
+                    <h3><img src="./images/side_bar.png" alt="">　EXPERIENCE</h3>
+                    <div class="user_text">
+                        <dl>
+                            <dt>2022.09 - 2023.03</dt>
+                            <dd>다이트 한방병원 코디네이터 근무</dd>
+                        </dl>
+                        <dl>
+                            <dt>2019.03 - 2019.04</dt>
+                            <dd>신안산대학교 국제경영과 홍보 이미지 제작</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="tool">
+                    <h3><img src="./images/side_bar.png" alt="">　TOOL</h3>
+                    <div class="user_text">
+                        <div class="icon_up">
+                            <p><img src="./images/photoshop.png" alt=""></p>
+                            <p><img src="./images/illustration.png" alt=""></p>
+                            <p><img src="./images/prim.png" alt=""></p>
+                            <p><img src="./images/figma.png" alt=""></p>
+                        </div>
+                        <div class="icon_down">
+                            <p><img src="./images/html.png" alt=""></p>
+                            <p><img src="./images/css.png" alt=""></p>
+                            <p><img src="./images/github.png" alt=""></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="five">
-        <p><img src="./images/5.png" alt=""></p>
-        <div class="app_link">
-            <a href="#"><img src="./images/app.png" alt=""></a>
-            <a href="#"><img src="./images/app2.png" alt=""></a>
-            <a href="#"><img src="./images/app3.png" alt=""></a>
+        <div class="web_design" id="web">
+            <div class="beeman">
+                <div class="left">
+                    <p><img src="./images/beeman_left.png" alt=""></p>
+                    <div class="title">
+                        <h2>Web Desing <em>01</em></h2>
+                        <p>안상규벌꿀</p>
+                        <p>
+                            부지런한 꿀벌의 힘과 꿈을 향한 열정을 담아왔습니다.<br>
+                            안상규벌꿀은 우리 모두의 건강을 위해 최선을 다하겠습니다.
+                        </p>
+                        <a href="https://beeman.co.kr/index.html" target="_blank">Page</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <p><img src="./images/beeman_morkup.png" alt=""></p>
+                    <div class="beeman_text">
+                        <div class="time">
+                            <h4>작업기간</h4>
+                            <p>16h (디자인 6h, 퍼블리싱 10h)</p>
+                        </div>
+                        <div class="contribute">
+                            <h4>참여도</h4>
+                            <p>개인 100% (디자인, 퍼블리싱)</p>
+                        </div>
+                        <div class="use_tool">
+                            <h4>사용툴</h4>
+                            <p>photoshop, figma, html, css</p>
+                        </div>
+                        <div class="design">
+                            <h4>키워드</h4>
+                            <p>깔끔함, 기품, 품격</p>
+                        </div>
+                    </div>
+                    <div class="web_button">
+                        <a href="#">기획서</a>
+                        <a href="#">와이어프레임</a>
+                        <a href="#">완성페이지</a>
+                    </div>
+                </div>
+            </div>
+            <div class="marketb">
+                <div class="left">
+                    <p><img src="./images/marketb_left.png" alt=""></p>
+                    <div class="title">
+                        <h2>Web Desing <em>02</em></h2>
+                        <p>마켓비</p>
+                        <p>
+                            모두, 각자의 홈피니싱. 우리 모두의 공간을 각자의 느낌대로.<br>
+                            각자의 분위기가 모여 모두의 일상으로.
+                        </p>
+                        <a href="https://marketb.kr/" target="_blank">Page</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <p><img src="./images/marketb_mockup.png" alt=""></p>
+                    <div class="marketb_text">
+                        <div class="time">
+                            <h4>작업기간</h4>
+                            <p>18h (디자인 8h, 퍼블리싱 10h)</p>
+                        </div>
+                        <div class="contribute">
+                            <h4>참여도</h4>
+                            <p>개인 100% (디자인, 퍼블리싱)</p>
+                        </div>
+                        <div class="use_tool">
+                            <h4>사용툴</h4>
+                            <p>photoshop, figma, html, css</p>
+                        </div>
+                        <div class="design">
+                            <h4>키워드</h4>
+                            <p>깔끔함, 감각적, 콜라주</p>
+                        </div>
+                    </div>
+                    <div class="web_button">
+                        <a href="#">기획서</a>
+                        <a href="#">와이어프레임</a>
+                        <a href="#">완성페이지</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="six">
-        <p><img src="./images/6.png" alt=""></p>
-    </div>
-    <div class="seven">
-        <p><img src="./images/7.png" alt=""></p>
-    </div>
+        <div class="app_design" id="app">
+            <div class="icon">
+                <p><img src="./images/appdesign.png" alt=""></p>
+                <p><img src="./images/appdesign_icon.png" alt=""></p>
+                <p><img src="./images/appdesign_icon2.png" alt=""></p>
+            </div>
+            <div class="app_content">
+                <div class="title">
+                    <h2>Web Design</h2>
+                    <p>MUSIUM</p>
+                    <p>
+                        엠비언스 사운드, 배경음악, 효과음, 특수 사운드 등을<br>
+                        한 곳에 모아 제공하는 어플리케이션입니다.
+                    </p>
+                </div>
+                <div class="app_link">
+                    <a href="https://www.figma.com/proto/udo7yyHBf6zjgYsEUuOHEm/%ED%8C%80-%EC%95%B1-%EB%94%94%EC%9E%90%EC%9D%B8-PDF-%EC%9E%91%EC%97%85?node-id=1-2&t=np30maJuzIe8DnKc-1&scaling=contain&content-scaling=fixed&page-id=0%3A1" target="_blank">기획서</a>
+                    <a href="https://www.figma.com/proto/kyyAM1VzqYFg7vd9QPg0sK/%ED%8C%80-%EC%99%80%EC%9D%B4%EC%96%B4-%ED%94%84%EB%A0%88%EC%9E%84?node-id=0-26&t=iM5tSXwlh9axb1cS-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" target="_blank">와이어프레임</a>
+                    <a href="https://www.figma.com/proto/kgMQQd8tGjMLGE2vydzjDE/%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%99%80%EC%9D%B4%EC%96%B4-%ED%94%84%EB%A0%88%EC%9E%84?node-id=208-168&t=jUFsllpdqoFS6IGN-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=208%3A168" target="_blank">프로토타입</a>
+                </div>
+                <div class="info">
+                    <div class="time">
+                        <h4>작업기간</h4>
+                        <p>24.05.09 - 24.05.23</p>
+                    </div>
+                    <div class="contribute">
+                        <h4>참여도</h4>
+                        <p>3인 팀 작업</p>
+                    </div>
+                    <div class="tool">
+                        <h4>사용툴</h4>
+                        <p>photoshop, illustrator, figma</p>
+                    </div>
+                    <div class="page">
+                        <h4>제작페이지</h4>
+                        <p>로그인, 메인 홈, 팀, 검색, <br>마이페이지, 세부페이지 … 총 44장</p>
+                    </div>
+                    <div class="contribute_page">
+                        <h4>담당페이지</h4>
+                        <p>메인 홈, 팀 및 기획서 디자인</p>
+                    </div>
+                </div>
+            </div>
+            <p><img src="./images/app_design_MUSIUM.png" alt=""></p>
+        </div>
+        <div class="sns_design" id="sns">
+            <h2>SNS Design</h2>
+            <div class="banner_img">
+                <div class="up_img">
+                    <p><img src="./images/banner1.png" alt=""></p>
+                    <p><img src="./images/banner2.png" alt=""></p>
+                    <p><img src="./images/banner3.png" alt=""></p>
+                    <p><img src="./images/banner4.png" alt=""></p>
+                    <p><img src="./images/banner5.png" alt=""></p>
+                </div>
+                <div class="down_img">
+                    <p><img src="./images/banner6.png" alt=""></p>
+                    <p><img src="./images/banner7.png" alt=""></p>
+                    <p><img src="./images/banner8.png" alt=""></p>
+                    <p><img src="./images/banner9.png" alt=""></p>
+                    <p><img src="./images/banner10.png" alt=""></p>
+                </div>
+            </div>
+        </div>
+        <div class="detail_page" id="detail">
+            <h2>Detail Page</h2>
+            <div class="detail_list">
+                <a href="#"><img src="./images/detail1.png" alt=""></a>
+                <a href="#"><img src="./images/detail2.png" alt=""></a>
+                <a href="#"><img src="./images/detail4.png" alt=""></a>
+                <a href="#"><img src="./images/detail3.png" alt=""></a>
+            </div>
+            <!-- swiper 클릭 시 실행되는 팝업 -->
+            <div class="big_bg">
+                <div class="img"><img src="./images/detail1.png" alt=""></div>
+            </div>
+        </div>
+        <div class="last">
+            <div class="contact">
+                <h4>Contact</h4>
+                <p>010 - 9969 - 4662</p>
+                <p>casenoxove@gmail.com</p>
+            </div>
+            <div class="last_title">
+                <p><em>트렌드와 감각</em>을 추구하는 디자이너가 되겠습니다.</p>
+                <h1>THANK YOU.</h1>
+            </div>
+            <div class="kakao">
+                <p><img src="./images/kakao_qr.png" alt=""></p>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
